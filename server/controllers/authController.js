@@ -386,8 +386,8 @@ const emailVerificationLink = async (req, res,next) => {
             from:process.env.SENDER_EMAIL,
             // to:email,
             //send mail to admin to verify new user
-            to:process.env.ADMIN_EMAIL,
-            subject:"Book It User Verification",
+            to:process.env.ADMIN_MAIN,
+            subject:" User Verification",
             html:verifyEmailTemplate(resetLink,userFind)
             // text:`This link is valid for 5 minutes \n ${process.env.CLIENT_URL}/forgotPassword/${userFind.id}/${setUserToken.verifyToken} \n click on above link`
           }

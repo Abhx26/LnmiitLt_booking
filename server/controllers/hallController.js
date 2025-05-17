@@ -1,7 +1,7 @@
 const Hall = require('../model/hallSchema');
 const User = require("../model/userSchema");
 
-const createHall = async (res, req, next) => {
+const createHall = async (req, res, next) => {
   try {
     const { name, location, capacity,amenities,description,hallCreater } = req.body;
 

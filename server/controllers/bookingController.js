@@ -543,7 +543,7 @@ const updateBooking = async (req, res, next) => {
     
         const mailOptions = {
           from: process.env.SENDER_EMAIL,
-          to: booking.email, // Use the user's email associated with the booking
+          to: process.env.ADMIN_LT_BOOK, // Use the user's email associated with the booking
           subject: 'Booking Request Approved',
           html: sendApprovalEmailTemplate(booking.eventName, booking.bookedHallName, booking.organizingClub, booking.institution, booking.department, bookingId),
         };
